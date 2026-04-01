@@ -222,7 +222,7 @@ const numbers = process.argv.slice(3);
 
 if (!isValidOperation(operation)) {
     console.log("Invalid operation. Use: add, subtract, multiply, or divide");
-    return;
+    process.exit(1);
 }
 
 const nums = parseNumbers(numbers);

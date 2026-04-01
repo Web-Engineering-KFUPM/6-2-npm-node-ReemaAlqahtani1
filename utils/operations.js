@@ -11,7 +11,7 @@ export function multiply(numbers) {
 
 export function divide(numbers) {
     if (numbers.slice(1).includes(0)) {
-        throw new Error("Cannot divide by zero");
+        return "Error: Division by zero";
     }
     return numbers.slice(1).reduce((result, num) => result / num, numbers[0]);
 }
