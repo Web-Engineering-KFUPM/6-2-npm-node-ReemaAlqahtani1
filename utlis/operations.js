@@ -1,14 +1,17 @@
 export function add(numbers) {
-    return {}
+    return numbers.reduce((sum, num) => sum + num, 0);
 }
 export function subtract(numbers) {
-    return {}
+    return numbers.slice(1).reduce((result, num) => result - num, numbers[0]);
 }
 
 export function multiply(numbers) {
-    return {}
+    return numbers.reduce((result, num) => result * num, 1);
 }
 
 export function divide(numbers) {
-    return {}
+    if (numbers.slice(1).includes(0)) {
+        throw new Error("Cannot divide by zero");
+    }
+    return numbers.slice(1).reduce((result, num) => result / num, numbers[0]);
 }
